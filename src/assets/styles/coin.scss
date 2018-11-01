@@ -1,0 +1,62 @@
+.coin{
+
+  &-table{
+    width: 100%;
+    background: rgb(51, 47, 47);
+    padding: 10px;
+    border-radius: 3px;
+
+    thead{
+      th{
+        border-bottom: 1px solid #444;
+        padding: 10px;
+        color: #6c9ffd;
+      }
+    }
+    tbody{
+
+    }
+    th,td{
+      padding: 10px;
+      text-align: left;
+    }
+  }
+
+  &-name{
+    span{
+      display: block;
+      font-size: 80%;
+      opacity: .8;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .coin{
+
+    &-table{
+      td, th{
+        display: none;
+      }
+      .tablet,
+      .mobile{
+        display: table-cell;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .coin{
+
+    &-table{
+      .tablet{
+        display: none;
+      }
+    }
+  }
+}
