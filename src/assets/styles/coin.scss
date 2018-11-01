@@ -1,32 +1,60 @@
 .coin{
 
   &-table{
-    width: 100%;
     background: rgb(51, 47, 47);
-    padding: 10px;
     border-radius: 3px;
     border-spacing: 0;
+    flex: 1 0 100%;
+    overflow: scroll;
 
-    thead{
-      th{
-        border-bottom: 1px solid #444;
+    &-head,
+    &-row{
+      display: flex;
+      justify-content: space-evenly;
+      &>*{
+        &:first-child{
+          flex: 0 0 50px;
+        }
+        &:nth-child(2){
+          flex: 1 0 150px;
+          text-align: left;
+        }
+        &:nth-child(3){
+          text-align: right;
+          padding-right: 30px;
+        }
+        flex: 1 0 0;
         padding: 10px;
+        text-align: center;
+      }
+    }
+    &-head{
+      position: sticky;
+      top: 0;
+      background: #222;
+      z-index: 2;
+      div{
+        border-bottom: 1px solid #444;
         color: #6c9ffd;
       }
     }
-    tbody{
+    &-body{
 
     }
     th,td{
       padding: 10px;
       text-align: left;
     }
-    .up td{
+    .up>*{
       animation: up 1s ease-in-out 1;
     }
-    .down td{
+    .down>*{
       animation: down 1s ease-in-out 1;
     }
+  }
+
+  &-row{
+
   }
 
   &-name{
@@ -45,12 +73,16 @@
   .coin{
 
     &-table{
-      td, th{
-        display: none;
+      &-head,
+      &-row{
+        &>*{
+          display: none;
+        }
       }
       .tablet,
       .mobile{
-        display: table-cell;
+        display: block;
+        flex: 1 0 0;
       }
     }
   }

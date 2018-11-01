@@ -1,36 +1,34 @@
 <template>
-  <table class="coin-table">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th class="mobile">Name</th>
-        <th class="mobile">Price</th>
-        <th>Market Cap</th>
-        <th>Volume (24Hr)</th>
-        <th class="tablet">Change (24Hr)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr 
-        :class="`coin ${coin.changed}`"
+  <div class="coin-table">
+    <div class="coin-table-head">
+      <div>Rank</div>
+      <div class="mobile">Name</div>
+      <div class="mobile">Price</div>
+      <div>Market Cap</div>
+      <div>Volume (24Hr)</div>
+      <div class="tablet">Change (24Hr)</div>
+    </div>
+    <div class="coin-table-body">
+      <div 
+        :class="`coin-table-row ${coin.changed}`"
         v-for="coin in data" 
         :key="coin.id"
       >
-        <td>{{ coin.rank }}</td>
-        <td class="coin-name mobile">
+        <div>{{ coin.rank }}</div>
+        <div class="coin-name mobile">
           {{ coin.name }}
           <span>{{ coin.symbol }}</span>
-        </td>
-        <td class="coin-price mobile">{{ coin.priceUsd | us  }}</td>
-        <td>${{ coin.marketCapUsd | shorten }}</td>
-        <td>${{ coin.volumeUsd24Hr | shorten }}</td>
-        <td 
+        </div>
+        <div class="coin-price mobile">{{ coin.priceUsd | us  }}</div>
+        <div>${{ coin.marketCapUsd | shorten }}</div>
+        <div>${{ coin.volumeUsd24Hr | shorten }}</div>
+        <div 
           class="tablet"
           :style="{ color: calcPercentColor(coin.changePercent24Hr) }"
-        >{{ coin.changePercent24Hr | percent }}%</td>
-      </tr>
-    </tbody>
-  </table>
+        >{{ coin.changePercent24Hr | percent }}%</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 
