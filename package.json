@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
     "node-sass": "^4.9.0",
