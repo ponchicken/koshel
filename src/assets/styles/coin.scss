@@ -5,6 +5,7 @@
     background: rgb(51, 47, 47);
     padding: 10px;
     border-radius: 3px;
+    border-spacing: 0;
 
     thead{
       th{
@@ -19,6 +20,12 @@
     th,td{
       padding: 10px;
       text-align: left;
+    }
+    .up td{
+      animation: up 1s ease-in-out 1;
+    }
+    .down td{
+      animation: down 1s ease-in-out 1;
     }
   }
 
@@ -59,4 +66,16 @@
       }
     }
   }
+}
+
+
+@keyframes up {
+  0% {background: transparent;}
+  30% {background: rgba(0, 128, 0, 0.2);}
+  100%{background: transparent;}
+}
+@keyframes down {
+  0% {background: transparent;}
+  30% {background: rgba(255, 0, 0, 0.2);}
+  100%{background: transparent;}
 }
