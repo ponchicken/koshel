@@ -1,0 +1,2 @@
+body{background:#111;min-width:420px}main{padding:20px;margin:0 auto}.coin-table{width:100%;background:#332f2f;padding:10px;border-radius:3px}.coin-table thead th{border-bottom:1px solid #444;padding:10px;color:#6c9ffd}.coin-table td,.coin-table th{padding:10px;text-align:left}.coin-name span{display:block;font-size:80%;opacity:.8}@media (max-width:768px){.coin-table td,.coin-table th{display:none}.coin-table .mobile,.coin-table .tablet{display:table-cell}}@media (max-width:500px){.coin-table .tablet{display:none}}
+/*# sourceMappingURL=app.1f8d70f9.css.map */
